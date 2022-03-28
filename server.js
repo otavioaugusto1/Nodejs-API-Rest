@@ -7,10 +7,24 @@ const http = require('http');
 http.createServer((request,response) =>{
     response.writeHead(200, {'Content-type': 'application/json'})
 
-    response.end(JSON.stringify({
-        message:"Minha primeira aplicação com Node.js"
-    }))
+    //tratativa de rotas
     // esse comando .end é o que realmente envia na página
+    if (request.url === '/produto'){
+        response.end(JSON.stringify({
+            message:"Rota de produto"
+        }))
+    }
+
+    if (request.url === '/usuario'){
+        response.end(JSON.stringify({
+            message:"Rota de usuario"
+        }))
+    }
+
+    response.end(JSON.stringify({
+        message: "Qualquer outra rota"
+    }))
+
     
 
 }).listen(4001, () => console.log("Servidor está rodando na porta 4001"))
