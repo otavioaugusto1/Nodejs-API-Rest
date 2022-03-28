@@ -1,3 +1,5 @@
+//comando para executar após a instalação do nodemon:
+// npm run dev
 const express = require("express");
 
 const app = express()
