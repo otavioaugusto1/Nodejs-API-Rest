@@ -4,10 +4,21 @@ const express = require("express");
 
 const app = express()
 
-app.get("/primeira-rota", (request, response) => {
-    return response.json({
-        message: "Acessou a primeira rota"
-    })
-})
+const products = []
+
+/**
+ * POST => Inserir 
+ * GET => Buscar um ou mais dados
+ * PUT => Alterar
+ * DELETE => Remover
+ */
+
+/**
+ * body => Sempre que eu quiser enviar dados para minha aplicação
+ * params => parâmetros da url (de rota) ex: /product/123456789
+ * Query => /product?id=2345432345432
+ */
+app.post('/')
+
 
 app.listen(4002, () => console.log("Servidor está rodando na porta 4002"))
