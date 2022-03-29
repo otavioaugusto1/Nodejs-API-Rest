@@ -2,6 +2,13 @@ POST http://localhost:4002/products
 content-type: application/json 
 
 {
-    "name":"Caneca azul",
+    "name":"Caneca black",
     "price":3
 }
+
+###
+
+GET http://localhost:4002/products
+
+###
+GET http://localhost:4002/products/baccd81d-a9ee-4f62-8ef6-3f8c59baa8e1
